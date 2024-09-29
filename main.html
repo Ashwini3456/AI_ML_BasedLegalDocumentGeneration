@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Document Generator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body >
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Legal Document Generator</span></h2>
+    <div class='description'>
+
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="/predict" method="POST"> 
+
+      <label>First Party Name</label><input type="text" name="fpn" placeholder="Enter the First Party Name"><br>
+        <label>First Aadhar No.</label><input type="text" name="fan" placeholder="Enter the Aadhar No."><br>
+        <label>First Party Address</label><input type="text" name="fpa" placeholder="Enter the First Party Address"><br>
+        <label>Second Party Name</label><input type="text" name="spn" placeholder="Enter the Second Party Name"><br>
+        <label>Second Aadhar No.</label><input type="text" name="san" placeholder="Enter the Aadhar No."><br>
+        <label>Second Party Address</label><input type="text" name="spa" placeholder="Enter the Second Party Address"><br>
+        
+		<label>Type of Aggreement</label><select  name="ta" >
+		<option value="0">Rent Agreement </option>
+		<option value="1">Business Agreement  </option>
+		<option value="2">Loan Agreement  </option>
+		
+		</select><br>
+        
+		</select><br>
+
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+
+</body>
+
+</html>

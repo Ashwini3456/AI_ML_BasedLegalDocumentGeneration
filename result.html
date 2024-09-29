@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Legal Documentor Generator</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+ <script> 
+        function printDiv() { 
+            var divContents = document.getElementById("GFG").innerHTML; 
+            var a = window.open('', '', 'height=1500, width=1500'); 
+            a.document.write('<html>'); 
+            a.document.write('<body align="justify">  <br>'); 
+            a.document.write(divContents); 
+            a.document.write('</body></html>'); 
+            a.document.close(); 
+            a.print(); 
+        } 
+    </script> 
+    <body align="justify">
+<div id="GFG" align="justify">
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font"><h1>{{ ta }}</h1></span></h2>
+            <div class='description'>   		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">First Party Name : {{ fpn}}		</div>
+		<div class="results">First Aadhar No : {{ fan}}		</div>
+		<div class="results">Second Party Name : {{ spn}}		</div>
+		<div class="results">Second Aadhar No : {{ san}}		</div>
+		<div class="results">Date  : {{ tdate}}		</div>
+		<div class="results">Doc Id : {{ docid}}		</div>
+		<div class="results" ><h3>Agreement Details	</h3>	</div>
+		<div class="results" align="justify" > <p align="justify">{{ s }}	</p>	</div><br>
+		<div class="results" align="justify"> <p align="justify">{{ s1 }}	</p>	</div><br>
+		<div class="results" align="justify"> <p align="justify">{{ s2 }}		</p></div><br>
+		<div class="results" align="justify"> <p align="justify">{{ s3 }}	</p>	</div><br>
+		<div class="results" align="justify" > <p align="justify">{{ s4 }}	</p>	</div><br>
+		<div class="results" align="justify"> <p align="justify">{{ s5 }}	</p>	</div><br>
+		<div class="results" align="justify" > <p align="justify">{{ s6 }}	</p>	</div><br>
+		<div class="results" align="justify"> <p align="justify">{{ s7 }}	</p>	</div><br><br><br>
+		<div class="results" align="right"> <p align="right">First Party 	</p><br><br>
+<p >Sign & Seal</p>		</div><br>
+		<div class="results" align="right"> <p align="right">Second  Party 	</p><br><br>
+<p >Sign & Seal</p>			</div><br>
+		</div>
+		<div class="results"><button onclick="printDiv()">Print Document</button><br><a href="/home">Home </a></div>
+
+	</body>
+</html>
